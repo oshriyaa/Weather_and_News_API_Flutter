@@ -1,3 +1,24 @@
+// import 'package:flutter/material.dart';
+// import 'package:week2/weather/weather_service.dart';
+
+// class WeatherPage extends StatelessWidget {
+//   const WeatherPage({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//           child: TextButton(
+//         onPressed: () {
+//           WeatherService.getWeather();
+//         },
+//         child: Text("GET WEATHER DATA"),
+//       )),
+//     );
+//   }
+// }
+
+
 import 'package:flutter/material.dart';
 import 'package:week2/weather/weather_service.dart';
 
@@ -9,13 +30,15 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  Future<dynamic>? weatherResp;
   final myController = TextEditingController();
-  String city = "Kathmandu";
+
+
+  Future<dynamic>? weatherResp;
+  String city = "";
 
   @override
   void initState() {
-    weatherResp = WeatherService.getWeather(city);
+    weatherResp = WeatherService.getWeather('');
     super.initState();
   }
 
