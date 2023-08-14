@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week2/news/news_interface.dart';
 import 'package:week2/weather/weather_interface.dart';
 
 void main() {
@@ -16,6 +17,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const WeatherPage());
+        home: const NewsInterface());
   }
 }
